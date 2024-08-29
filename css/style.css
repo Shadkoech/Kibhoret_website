@@ -158,6 +158,8 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   border-color: #FF715B;
 }
 
+
+
 .btn-solid-white {
   border-color: #fff;
   color: #fff;
