@@ -1024,15 +1024,18 @@ ul.dropdown-menu li {
 
 .portfolio {
   position: relative;
+  overflow: hidden;
 }
 .portfolio:before {
   position: absolute;
   content: "";
   left: 0px;
   top: 0px;
+  bottom: 0px;
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-color: #f7f7f7;
+  pointer-events: none;
 }
 
 .portflio-item:before {
@@ -1094,6 +1097,175 @@ ul.dropdown-menu li {
 
 .portfolio-gallery {
   padding: 0px 30px;
+}
+
+/* Portfolio mosaic: editorial grid, balanced spacing */
+.portfolio--mosaic {
+  padding-bottom: 70px;
+}
+.portfolio--mosaic .portfolio-intro {
+  margin-bottom: 2.5rem;
+}
+@media (min-width: 992px) {
+  .portfolio--mosaic .portfolio-intro {
+    margin-bottom: 3rem;
+  }
+}
+.portfolio-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #ff715b;
+  margin-bottom: 0.65rem;
+}
+.portfolio-intro-meta {
+  padding-bottom: 0.15rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem 1.35rem;
+}
+.portfolio-stat {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111;
+}
+.portfolio-stat--muted {
+  font-weight: 500;
+  color: #6c757d;
+}
+@media (max-width: 991.98px) {
+  .portfolio-intro-meta {
+    text-align: left !important;
+    justify-content: flex-start;
+  }
+}
+.portfolio-mosaic {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+.portfolio-mosaic__cell {
+  min-width: 0;
+}
+@media (min-width: 992px) {
+  .portfolio-mosaic {
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(0, auto);
+    gap: 1.35rem;
+  }
+  .portfolio-mosaic__cell--featured {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 2;
+  }
+  .portfolio-mosaic__cell:nth-child(2) {
+    grid-column: 7 / span 6;
+    grid-row: 1;
+  }
+  .portfolio-mosaic__cell:nth-child(3) {
+    grid-column: 7 / span 6;
+    grid-row: 2;
+  }
+  .portfolio-mosaic__cell:nth-child(4) {
+    grid-column: 1 / span 4;
+    grid-row: 3;
+  }
+  .portfolio-mosaic__cell:nth-child(5) {
+    grid-column: 5 / span 4;
+    grid-row: 3;
+  }
+  .portfolio-mosaic__cell:nth-child(6) {
+    grid-column: 9 / span 4;
+    grid-row: 3;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .portfolio-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+  }
+  .portfolio-mosaic__cell,
+  .portfolio-mosaic__cell--featured {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+}
+.portflio-item--card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px rgba(17, 17, 17, 0.07);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  margin-bottom: 0 !important;
+}
+.portflio-item--card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 48px rgba(17, 17, 17, 0.11);
+}
+.portflio-item--card > a {
+  display: block;
+  position: relative;
+  height: 100%;
+  min-height: 200px;
+}
+.portflio-item--card > a > img.img-fluid {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+}
+@media (min-width: 992px) {
+  .portfolio-mosaic__cell:not(.portfolio-mosaic__cell--featured) .portflio-item--card > a {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+  .portfolio-mosaic__cell--featured .portflio-item--card {
+    height: 100%;
+    min-height: 280px;
+  }
+  .portfolio-mosaic__cell--featured .portflio-item--card > a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 0;
+    aspect-ratio: unset;
+  }
+  .portfolio-mosaic__cell--featured .portflio-item--card > a > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .portflio-item--card > a {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .portfolio-mosaic {
+    gap: 1rem;
+  }
+  .portflio-item--card > a {
+    aspect-ratio: 16 / 10;
+    min-height: 0;
+  }
+}
+.portflio-item--card:before {
+  top: 0;
+  z-index: 1;
+}
+.portflio-item--card .overlay-item {
+  z-index: 2;
+}
+.portflio-item--card .portfolio-item-content {
+  z-index: 3;
 }
 
 .project-info-list {

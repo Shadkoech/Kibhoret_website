@@ -302,26 +302,30 @@
 </section> -->
 
 <!-- section portfolio start -->
-<section id="projects" class="section portfolio pb-0">
+<section id="projects" class="section portfolio portfolio--mosaic">
 	<div class="container">
-		<div class="row">
+		<div class="row align-items-end portfolio-intro">
 			<div class="col-lg-8">
-				<div class="heading">
-					<h2 class="mb-4">Explore Our Impressive Portfolio of Projects</h2>
-					<p>Discover the transformative power of our exceptional work as we take your business to the next level.</p>
+				<div class="heading mb-0">
+					<p class="portfolio-eyebrow">Selected work</p>
+					<h2 class="mb-3">Explore Our Impressive Portfolio of Projects</h2>
+					<p class="mb-0">Discover the transformative power of our exceptional work as we take your business to the next level.</p>
 				</div>
 			</div>
+			<div class="col-lg-4 portfolio-intro-meta text-lg-right mt-4 mt-lg-0">
+				<span class="portfolio-stat">7+ projects</span>
+				<span class="portfolio-stat portfolio-stat--muted">Web &amp; mobile</span>
+			</div>
 		</div>
-	</div>
 
-	<div class="container-fluid">
-		<div class="row portfolio-gallery">
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4" style="height: 100%; object-fit: cover;>
+		<div class="portfolio-mosaic" aria-label="Project gallery">
+			<div class="portfolio-mosaic__cell portfolio-mosaic__cell--featured">
+				<div class="portflio-item portflio-item--card position-relative">
 					<a href="https://olkisir.koech.tech/" target="_blank">
-						<img src="images/portfolio/olkisir.png" alt="" class="img-fluid w-100 ">
-						<div class="overlay-item"><i class="ti-link"></i></div>	
-						
+						<img src="images/portfolio/olkisir.png" alt="" class="img-fluid w-100">
+						<div class="overlay-item">
+							<i class="ti-link"></i>
+						</div>
 						<div class="portfolio-item-content">
 							<h3 class="mb-0 text-white">Dispatch-Returns System</h3>
 							<p class="text-white-50">Web Development</p>
@@ -330,8 +334,8 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-6 " style="height: 5%;">
-				<div class="portflio-item position-relative mb-4">
+			<div class="portfolio-mosaic__cell">
+				<div class="portflio-item portflio-item--card position-relative">
 					<a href="https://shadkoech.github.io/Kibhoret_LandingPage/" target="_blank">
 						<img src="images/portfolio/kibhoret.png" alt="" class="img-fluid w-100">
 						<div class="overlay-item">
@@ -345,11 +349,10 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
+			<div class="portfolio-mosaic__cell">
+				<div class="portflio-item portflio-item--card position-relative">
 					<a href="https://inspectidol.com/" target="_blank">
 						<img src="images/portfolio/inspect_idol_resized.png" alt="" class="img-fluid w-100">
-
 						<div class="overlay-item">
 							<i class="ti-link"></i>
 						</div>
@@ -361,11 +364,10 @@
 				</div>
 			</div>
 
-			<div class="col-lg-4 col-md-6">
-				<div class="portflio-item position-relative mb-4">
+			<div class="portfolio-mosaic__cell">
+				<div class="portflio-item portflio-item--card position-relative">
 					<a href="https://teliconconsortium.com" target="_blank">
 						<img src="images/portfolio/telicon_resized.png" alt="" class="img-fluid w-100">
-
 						<div class="overlay-item">
 							<i class="ti-link"></i>
 						</div>
@@ -376,7 +378,36 @@
 					</a>
 				</div>
 			</div>
-			
+
+			<div class="portfolio-mosaic__cell">
+				<div class="portflio-item portflio-item--card position-relative">
+					<a href="https://www.skillbloom.co.ke/" target="_blank">
+						<img src="images/portfolio/skillbloom.png" alt="" class="img-fluid w-100">
+						<div class="overlay-item">
+							<i class="ti-link"></i>
+						</div>
+						<div class="portfolio-item-content">
+							<h3 class="mb-0 text-white">SkillBloom</h3>
+							<p class="text-white-50">Web Development</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+			<div class="portfolio-mosaic__cell">
+				<div class="portflio-item portflio-item--card position-relative">
+					<a href="https://www.smartrental.co.ke/" target="_blank">
+						<img src="images/portfolio/smartrental.png" alt="" class="img-fluid w-100">
+						<div class="overlay-item">
+							<i class="ti-link"></i>
+						</div>
+						<div class="portfolio-item-content">
+							<h3 class="mb-0 text-white">SmartRental Kenya</h3>
+							<p class="text-white-50">Web Development</p>
+						</div>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 </section>
@@ -388,7 +419,7 @@
 		<div class="row">
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="counter-item text-center mb-5 mb-lg-0">
-					<h2 class="mb-0"><span class="counter-stat font-weight-bold">5</span> +</h2>
+					<h2 class="mb-0"><span class="counter-stat font-weight-bold">7</span> +</h2>
 					<p>Projects Done</p>
 				</div>
 			</div>
@@ -555,8 +586,8 @@
 			<div class="col-lg-3 col-md-6 col-sm-6">
 				<div class="widget widget-contact mb-5 mb-lg-0">
 					<h4 class="text-capitalize mb-4">Get in Touch</h4>
-					<h6><a href="mailto:hello@kibhoret.co.ke" > <i class="ti-headphone-alt mr-3"></i>hello@kibhoret.co.ke</a></h6>
-					<h6><a href="tel:+254768007670" > <i class="ti-mobile mr-3"></i>+254 768 007 670</a></h6>
+					<h6><a href="mailto:birdbook40@gmail.com" > <i class="ti-headphone-alt mr-3"></i>birdbook40@gmail.com</a></h6>
+					<h6><a href="tel:+254755257267" > <i class="ti-mobile mr-3"></i>+254 755 257 267</a></h6>
 
 					<ul class="list-inline footer-socials mt-5">
 						<li class="list-inline-item"><a href="#"><i class="ti-facebook mr-2"></i></a></li>
